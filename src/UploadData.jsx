@@ -61,6 +61,14 @@ const UploadData = () => {
       const data = await response.json();
       console.log("User added successfully:", data);
 
+      if (response.ok) {
+      setSuccessMessage("User added successfully!");
+      } else {
+      setSuccessMessage("Error adding user.");
+      }
+
+
+      
       setNameInput("");
       setAgeInput("");
       setMsgInput("");
